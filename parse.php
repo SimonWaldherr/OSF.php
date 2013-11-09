@@ -40,25 +40,26 @@ function parserWrapper($pad) {
   return $return;
 }
 
-function parserWrapperAPI() {
-  if (isset($_POST['amazon']) && $_POST['amazon'] != '') {
-    $amazon = $_POST['amazon'];
+function parserWrapperAPI($postdata) {
+  if (isset($postdata['amazon']) && $postdata['amazon'] != '') {
+    $amazon = $postdata['amazon'];
   } else {
     $amazon = 'shownot.es-21';
   }
-  if (isset($_POST['thomann']) && $_POST['thomann'] != '') {
-    $thomann = $_POST['thomann'];
+  if (isset($postdata['thomann']) && $postdata['thomann'] != '') {
+    $thomann = $postdata['thomann'];
   } else {
     $thomann = '93439';
   }
-  if (isset($_POST['tradedoubler']) && $_POST['tradedoubler'] != '') {
-    $tradedoubler = $_POST['tradedoubler'];
+  if (isset($postdata['tradedoubler']) && $postdata['tradedoubler'] != '') {
+    $tradedoubler = $postdata['tradedoubler'];
   } else {
     $tradedoubler = '16248286';
   }
+
   $fullmode = 'false';
-  $tags = $_POST['tags'];
-  
+  $tags = $postdata['tags'];
+
   if ($tags == '') {
     $fullmode = 'true';
     $fullint = 2;
@@ -67,6 +68,7 @@ function parserWrapperAPI() {
     $fullint = 1;
     $tags = explode(' ', $tags);
   }
+
   $data = array(
     'amazon'       => $amazon,
     'thomann'      => $thomann,
@@ -76,10 +78,10 @@ function parserWrapperAPI() {
     'tags'         => $tags
   );
 
-  $encodedData = str_replace(' ','+',$_POST['pad']);
+  $encodedData = str_replace(' ','+',$postdata['pad']);
   $shownotesString = str_replace("\n", " \n", "\n" . base64_decode($encodedData) . "\n");
 
-  $mode = $_POST['mainmode'];
+  $mode = $postdata['mainmode'];
 
   if ($mode == 'block') {
     $mode = 'block style';
