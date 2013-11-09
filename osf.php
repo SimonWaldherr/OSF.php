@@ -174,7 +174,6 @@ function osf_get_episodenumber($header) {
   return $number[2][0];
 }
 
-
 function osf_parser($shownotes, $data) {
   // Diese Funktion ist das Herzstück des OSF-Parsers
   $tagsmode  = $data['tagsmode'];
