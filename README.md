@@ -1,4 +1,10 @@
-OSF.php
-=======
+#OSF.php
 
-a repo for the main-code of the OSF parser (to include in other projects)
+convert show notes from [OSF](https://github.com/shownotes/OSF-in-a-Nutshell) to HTML, mp4chaps, JSON, Markdown, ...
+
+license: MIT
+
+please visit [shownot.es](http://shownot.es)  
+
+---
+
