@@ -37,6 +37,7 @@ function parserWrapper($pad) {
 
   $return['json'] = json_encode($shownotesArray['export']);
   $return['chapter'] = osf_export_chapterlist($shownotesArray['export']);
+  $return['osf'] = osf_export_osf($shownotesArray['export']);
   return $return;
 }
 
