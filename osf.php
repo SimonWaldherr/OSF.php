@@ -159,7 +159,10 @@ function osf_get_episodetime($header) {
   preg_match_all($regex, $header, $date);
   date_default_timezone_set('Europe/Berlin');
   $date = strtotime($date[2][0]);
-  return $date;
+  if($date != false) {
+    return $date;
+  }
+  return '0';
 }
 
 function osf_get_podcastname($header) {
