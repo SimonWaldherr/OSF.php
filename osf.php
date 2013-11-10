@@ -878,12 +878,12 @@ function osf_export_osf($array, $full = false, $template, $filtertags = array(0 
               }
               $returnstring .= $text;
               if (isset($array[$arraykeys[$i]]['urls'][0])) {
-                $returnstring .= ' &lt;' . $array[$arraykeys[$i]]['urls'][0] . '&gt; ';
+                $returnstring .= ' <' . $array[$arraykeys[$i]]['urls'][0] . '> ';
               }
               if(count(@$array[$arraykeys[$i]]['tags']) !== 0) {
                 $returnstring .= ' #'.implode(' #', @$array[$arraykeys[$i]]['tags']);
               }
-              $returnstring .= "<br/> \n";
+              $returnstring .= "\n";
             }
             if (isset($array[$arraykeys[$i]]['subitems'])) {
               for ($ii = 0; $ii <= count($array[$arraykeys[$i]]['subitems'], COUNT_RECURSIVE); $ii++) {
@@ -903,12 +903,12 @@ function osf_export_osf($array, $full = false, $template, $filtertags = array(0 
                     }
                     $returnstring .= $text;
                     if (isset($array[$arraykeys[$i]]['subitems'][$ii]['urls'][0])) {
-                      $returnstring .= ' &lt;' . $array[$arraykeys[$i]]['subitems'][$ii]['urls'][0] . '&gt; ';
+                      $returnstring .= ' <' . $array[$arraykeys[$i]]['subitems'][$ii]['urls'][0] . '> ';
                     }
                     if(count(@$array[$arraykeys[$i]]['subitems'][$ii]['tags']) !== 0) {
                       $returnstring .= ' #'.implode(' #', @$array[$arraykeys[$i]]['subitems'][$ii]['tags']);
                     }
-                    $returnstring .= "<br/> \n";
+                    $returnstring .= "\n";
                   }
                 }
               }
