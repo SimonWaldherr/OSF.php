@@ -296,7 +296,7 @@ function osf_parser($shownotes, $data) {
               $newarray['tags'][] = 'link';
               break;
             case 's':
-              $newarray['tags'][] = 'section';
+              $newarray['tags'][] = 'section'; // niemand verwendet section, wir sollten #s für shopping freigeben
               break;
             case 't':
               $newarray['tags'][] = 'topic';
@@ -312,6 +312,12 @@ function osf_parser($shownotes, $data) {
               break;
             case 'i':
               $newarray['tags'][] = 'image';
+              break;
+            case 'r':
+              $newarray['tags'][] = 'revision';
+              break;
+            case 'p':
+              $newarray['tags'][] = 'prediction';
               break;
           }
         } else {
@@ -334,44 +340,47 @@ function osf_parser($shownotes, $data) {
       $newarray['urls'] = $purls;
     }
 
-    // Wenn Zeile mit "- " beginnt im Ausgabe-Array verschachteln
-    if (!$newarray['chapter']) {
-      if (isset($newarray['tags'])) {
-        if (((osf_specialtags($newarray['tags'], $specialtags)) && ($tagsmode == 0)) || ($tagsmode == 1) || ($exportall == 'true')) {
+    // Speichere nur Zeilen die nicht zur Revision/Überarbeitung markiert wurden
+    if (@array_search('revision', $newarray['tags']) === false) {
+      // Wenn Zeile mit "- " beginnt im Ausgabe-Array verschachteln
+      if (!$newarray['chapter']) {
+        if (isset($newarray['tags'])) {
+          if (((osf_specialtags($newarray['tags'], $specialtags)) && ($tagsmode == 0)) || ($tagsmode == 1) || ($exportall == 'true')) {
+            if (preg_match($pattern['kaskade'], $zeile[0])) {
+              $newarray['subtext'] = true;
+              $returnarray['export'][$lastroot]['subitems'][$kaskadei] = $newarray;
+            } else {
+              $returnarray['export'][$lastroot]['subitems'][$kaskadei] = $newarray;
+            }
+          } else {
+            unset($newarray);
+          }
+        } elseif ($exportall == 'true') {
           if (preg_match($pattern['kaskade'], $zeile[0])) {
             $newarray['subtext'] = true;
             $returnarray['export'][$lastroot]['subitems'][$kaskadei] = $newarray;
           } else {
             $returnarray['export'][$lastroot]['subitems'][$kaskadei] = $newarray;
           }
+        }
+        // Verschachtelungstiefe hochzählen
+        ++$kaskadei;
+      }
+      
+      // Wenn die Zeile keine Verschachtelung darstellt
+      else {
+        if (((osf_specialtags($newarray['tags'], $specialtags)) && ($tagsmode == 0)) || ((!osf_specialtags($newarray['tags'], $specialtags)) && ($tagsmode == 1)) || ($exportall == 'true')) {
+          // Daten auf oberster ebene einfügen
+          $returnarray['export'][$i] = $newarray;
+      
+          // Nummer des letzten Objekts auf oberster ebene auf akutelle Item Nummer setzen
+          $lastroot = $i;
+      
+          // Verschachtelungstiefe auf 0 setzen
+          $kaskadei = 0;
         } else {
           unset($newarray);
         }
-      } elseif ($exportall == 'true') {
-        if (preg_match($pattern['kaskade'], $zeile[0])) {
-          $newarray['subtext'] = true;
-          $returnarray['export'][$lastroot]['subitems'][$kaskadei] = $newarray;
-        } else {
-          $returnarray['export'][$lastroot]['subitems'][$kaskadei] = $newarray;
-        }
-      }
-      // Verschachtelungstiefe hochzählen
-      ++$kaskadei;
-    }
-
-    // Wenn die Zeile keine Verschachtelung darstellt
-    else {
-      if (((osf_specialtags($newarray['tags'], $specialtags)) && ($tagsmode == 0)) || ((!osf_specialtags($newarray['tags'], $specialtags)) && ($tagsmode == 1)) || ($exportall == 'true')) {
-        // Daten auf oberster ebene einfügen
-        $returnarray['export'][$i] = $newarray;
-
-        // Nummer des letzten Objekts auf oberster ebene auf akutelle Item Nummer setzen
-        $lastroot = $i;
-
-        // Verschachtelungstiefe auf 0 setzen
-        $kaskadei = 0;
-      } else {
-        unset($newarray);
       }
     }
     // Item Nummer hochzählen
@@ -381,7 +390,7 @@ function osf_parser($shownotes, $data) {
   // Zusatzinformationen im Array abspeichern (Zeilenzahl, Zeichenlänge und Hash der Shownotes)
   $returnarray['info']['zeilen']  = $i;
   $returnarray['info']['zeichen'] = strlen($shownotes);
-  $returnarray['info']['hash']  = md5($shownotes);
+  $returnarray['info']['hash']    = md5($shownotes);
   if (isset($header)) {
     $returnarray['header'] = $header;
   }
