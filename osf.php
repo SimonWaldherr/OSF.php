@@ -118,17 +118,25 @@ function osf_parse_person($string) {
       preg_match_all('/([^\(]+)\(@([^\)]+)@:adn\)/', $string, $url);
       $profileurl = 'https://alpha.app.net/' . trim($url[2][0]);
       $name = trim($url[1][0]);
+    } elseif ((strpos($string, ' (@') != false)&&(strpos($string, '@:gh') != false)) {
+      preg_match_all('/([^\(]+)\(@([^\)]+)@:gh\)/', $string, $url);
+      $profileurl = 'https://github.com/' . trim($url[2][0]);
+      $name = trim($url[1][0]);
     } elseif (strpos($string, ' (@') != false) {
       preg_match_all('/([^\(]+)\(@([^\)]+)\)/', $string, $url);
       $profileurl = 'https://twitter.com/' . trim($url[2][0]);
       $name = trim($url[1][0]);
     } elseif (strpos($string, '@:adn') != false) {
       preg_match_all('/@(\(?[\S]+\)?)@:adn/', $string, $url);
-      $profileurl = 'https://alpha.app.net/' . $url[1][0];
+      $profileurl = 'https://alpha.app.net/' . trim($url[1][0]);
+      $name = trim($url[1][0]);
+    } elseif (strpos($string, '@:gh') != false) {
+      preg_match_all('/@(\(?[\S]+\)?)@:gh/', $string, $url);
+      $profileurl = 'https://github.com/' . trim($url[1][0]);
       $name = trim($url[1][0]);
     } elseif (strpos($string, '@') != false) {
       preg_match_all('/@(\(?[\S]+\)?)/', $string, $url);
-      $profileurl = 'https://twitter.com/' . $url[1][0];
+      $profileurl = 'https://twitter.com/' . trim($url[1][0]);
       $name = trim($url[1][0]);
     } else {
       $name = trim($string);
