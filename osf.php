@@ -114,7 +114,15 @@ function osf_parse_person($string) {
     $profileurl = $url[1][0];
     $name = trim(preg_replace('/\<(http[\S]+)\>/', '', $string));
   } else {
-    if (strpos($string, '@:adn') != false) {
+    if ((strpos($string, ' (@') != false)&&(strpos($string, '@:adn') != false)) {
+      preg_match_all('/([^\(]+)\(@([^\)]+)@:adn\)/', $string, $url);
+      $profileurl = 'https://alpha.app.net/' . trim($url[2][0]);
+      $name = trim($url[1][0]);
+    } elseif (strpos($string, ' (@') != false) {
+      preg_match_all('/([^\(]+)\(@([^\)]+)\)/', $string, $url);
+      $profileurl = 'https://twitter.com/' . trim($url[2][0]);
+      $name = trim($url[1][0]);
+    } elseif (strpos($string, '@:adn') != false) {
       preg_match_all('/@(\(?[\S]+\)?)@:adn/', $string, $url);
       $profileurl = 'https://alpha.app.net/' . $url[1][0];
       $name = trim($url[1][0]);
@@ -135,7 +143,7 @@ function osf_get_persons($persons, $header) {
   $regex['shownoter'] = '/(Shownoter|Zusammengetragen)[^:]*:([ \S]*)/';
   $regex['podcaster'] = '/(Podcaster|Zusammengetragen)[^:]*:([ \S]*)/';
   preg_match_all($regex[$persons], $header, $persons);
-  $persons    = preg_split('/(,| und | and )/', $persons[2][0]);
+  $persons    = preg_split('/(,|;| und | and )/', $persons[2][0]);
   $personsArray = array();
   $personsArrayHTML = array();
   $i = 0;
@@ -143,11 +151,11 @@ function osf_get_persons($persons, $header) {
     $personArray = osf_parse_person($person);
     if ($personArray['url'] == false) {
       $personsArray[$i]['name'] = trim($personArray['name']);
-      $personsArrayHTML[$i] = '<span>' . $personArray['name'] . '</span>';
+      $personsArrayHTML[$i] = '<span>' . $personsArray[$i]['name'] . '</span>';
     } else {
       $personsArray[$i]['name'] = trim($personArray['name']);
-      $personsArray[$i]['url'] = trim($personArray['url'], " \t\n\r\0\x0B-)(<>");
-      $personsArrayHTML[$i] = '<a target="_blank" href="' . $personArray['url'] . '">' . $personArray['name'] . '</a>';
+      $personsArray[$i]['url'] = trim($personArray['url'], " \-\)\(\<\>\t\n\r\0\x0B");
+      $personsArrayHTML[$i] = '<a target="_blank" href="' . $personsArray[$i]['url'] . '">' . $personsArray[$i]['name'] . '</a>';
     }
     $i++;
   }
