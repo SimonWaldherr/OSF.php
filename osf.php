@@ -114,13 +114,29 @@ function osf_parse_person($string) {
     $profileurl = $url[1][0];
     $name = trim(preg_replace('/\<(http[\S]+)\>/', '', $string));
   } else {
-    if (strpos($string, '@:adn') != false) {
+    if ((strpos($string, ' (@') != false)&&(strpos($string, '@:adn') != false)) {
+      preg_match_all('/([^\(]+)\(@([^\)]+)@:adn\)/', $string, $url);
+      $profileurl = 'https://alpha.app.net/' . trim($url[2][0]);
+      $name = trim($url[1][0]);
+    } elseif ((strpos($string, ' (@') != false)&&(strpos($string, '@:gh') != false)) {
+      preg_match_all('/([^\(]+)\(@([^\)]+)@:gh\)/', $string, $url);
+      $profileurl = 'https://github.com/' . trim($url[2][0]);
+      $name = trim($url[1][0]);
+    } elseif (strpos($string, ' (@') != false) {
+      preg_match_all('/([^\(]+)\(@([^\)]+)\)/', $string, $url);
+      $profileurl = 'https://twitter.com/' . trim($url[2][0]);
+      $name = trim($url[1][0]);
+    } elseif (strpos($string, '@:adn') != false) {
       preg_match_all('/@(\(?[\S]+\)?)@:adn/', $string, $url);
-      $profileurl = 'https://alpha.app.net/' . $url[1][0];
+      $profileurl = 'https://alpha.app.net/' . trim($url[1][0]);
+      $name = trim($url[1][0]);
+    } elseif (strpos($string, '@:gh') != false) {
+      preg_match_all('/@(\(?[\S]+\)?)@:gh/', $string, $url);
+      $profileurl = 'https://github.com/' . trim($url[1][0]);
       $name = trim($url[1][0]);
     } elseif (strpos($string, '@') != false) {
       preg_match_all('/@(\(?[\S]+\)?)/', $string, $url);
-      $profileurl = 'https://twitter.com/' . $url[1][0];
+      $profileurl = 'https://twitter.com/' . trim($url[1][0]);
       $name = trim($url[1][0]);
     } else {
       $name = trim($string);
@@ -135,7 +151,7 @@ function osf_get_persons($persons, $header) {
   $regex['shownoter'] = '/(Shownoter|Zusammengetragen)[^:]*:([ \S]*)/';
   $regex['podcaster'] = '/(Podcaster|Zusammengetragen)[^:]*:([ \S]*)/';
   preg_match_all($regex[$persons], $header, $persons);
-  $persons    = preg_split('/(,| und | and )/', $persons[2][0]);
+  $persons    = preg_split('/(,|;| und | and )/', $persons[2][0]);
   $personsArray = array();
   $personsArrayHTML = array();
   $i = 0;
@@ -143,11 +159,11 @@ function osf_get_persons($persons, $header) {
     $personArray = osf_parse_person($person);
     if ($personArray['url'] == false) {
       $personsArray[$i]['name'] = trim($personArray['name']);
-      $personsArrayHTML[$i] = '<span>' . $personArray['name'] . '</span>';
+      $personsArrayHTML[$i] = '<span>' . $personsArray[$i]['name'] . '</span>';
     } else {
       $personsArray[$i]['name'] = trim($personArray['name']);
-      $personsArray[$i]['url'] = trim($personArray['url'], " \t\n\r\0\x0B-)(<>");
-      $personsArrayHTML[$i] = '<a target="_blank" href="' . $personArray['url'] . '">' . $personArray['name'] . '</a>';
+      $personsArray[$i]['url'] = trim($personArray['url'], " \-\)\(\<\>\t\n\r\0\x0B");
+      $personsArrayHTML[$i] = '<a target="_blank" href="' . $personsArray[$i]['url'] . '">' . $personsArray[$i]['name'] . '</a>';
     }
     $i++;
   }
@@ -175,6 +191,12 @@ function osf_get_episodenumber($header) {
   $regex = '/(Episode|Folge)[^:]*:([ \S]*)/';
   preg_match_all($regex, $header, $number);
   return $number[2][0];
+}
+
+function osf_get_episodename($header) {
+  $regex = '/(Title|Episodetitle|Thema|Subject)[^:]*:([ \S]*)/i';
+  preg_match_all($regex, $header, $title);
+  return $title[2][0];
 }
 
 function osf_parser($shownotes, $data) {
@@ -328,7 +350,7 @@ function osf_parser($shownotes, $data) {
         }
       }
       if (isset($newarray['tags'])) {
-        if (in_array("chapter", $newarray['tags'])) {
+        if (in_array('chapter', $newarray['tags'])) {
           $newarray['chapter'] = true;
         }
       }
@@ -343,8 +365,15 @@ function osf_parser($shownotes, $data) {
       $newarray['urls'] = $purls;
     }
 
+    $skipskipskip = false;
+    if(isset($newarray['tags'])) {
+      if(array_search('revision', $newarray['tags']) !== false) {
+        $skipskipskip = true;
+      }
+    }
+    //echo array_search('revision', $newarray['tags']);
     // Speichere nur Zeilen die nicht zur Revision/Überarbeitung markiert wurden
-    if (@array_search('revision', $newarray['tags']) === false) {
+    if ($skipskipskip === false) {
       // Wenn Zeile mit "- " beginnt im Ausgabe-Array verschachteln
       if (!$newarray['chapter']) {
         if (isset($newarray['tags'])) {
