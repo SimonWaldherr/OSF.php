@@ -224,7 +224,7 @@ SigInt <http://de.wikipedia.org/wiki/Signals_Intelligence> #g
 1388267660 Ersterfahrungen der Gäste mit dem Kongress und den Engeln, Empfehlung für Erstbesucher Engel zu werden
 1388267787 "Zeh rein halten oder Kopfsprung machen" / Congress besuchen oder gleich Engel werden (Chef) #q
 1388267841 Der Bedarf an Engeln ist für dieses Jahr gedeckt
-1388267995 "...vor allem wenn man in den Gängen rumläuft um zu gucken ob nicht wieder Leute auf den Gängen gespawnt sind." (Jasmin) #q
+1388267995 "... vor allem wenn man in den Gängen rumläuft um zu gucken ob nicht wieder Leute auf den Gängen gespawnt sind." (Jasmin) #q
 - "Spawnen" <http://de.wikipedia.org/wiki/Spawnen> #g
 1388268063 Wann/Wo kann man sich zum 31c3 als Engel melden?
 1388268076 "Nach dem Kongress ist vor dem Kongress." (Ralf) #quote
@@ -234,7 +234,7 @@ SigInt <http://de.wikipedia.org/wiki/Signals_Intelligence> #g
 - Nehmt Badeschlappen mit #spoiler
 1388268269 "Viel hilft viel." (Chef) #quote
 1388268339 IT-Crowd Notrufnummer <http://www.youtube.com/watch?v=HWc3WY3fuZU> #video
-- Die Nummer ist auf dem Kongress geschaltet - 0118 999 881 999 119 725 … 3
+- Die Nummer ist auf dem Kongress geschaltet - 0118 999 881 999 119 725 ... 3
 
 
 1388268378 Verabschiedung #c
