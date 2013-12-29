@@ -5,7 +5,7 @@ function osf_specialtags($needles, $haystack) {
   $return = false;
   if (is_array($needles)) {
     foreach ($needles as $needle) {
-      if (array_search($needle, $haystack) !== false) {
+      if (@array_search($needle, $haystack) !== false) {
         $return = true;
       }
     }

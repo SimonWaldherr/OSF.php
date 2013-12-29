@@ -1,0 +1,247 @@
+HEADER
+Podcast: Sondersendung
+Episode: 2
+Starttime: Sa Dec 28 2013 18:30:00 GMT+0100 (CET)
+relativeTimestamps: no
+Endtime: Sa Dec 28 2013 20:30:00 GMT+0100 (CET)
+Podcaster: Ralf Stockmann (@rstockm), Claudia Krell (@wortkomplex)
+Guests: Evelyn Schubert <https://twitter.com/eyelyn>, Sascha Ludwig, Fightling, Georg, Jannes, Florian, Stefan Wehrmeyer <https://twitter.com/stefanwehrmeyer>, Michael Büker <https://twitter.com/emtiu>, Jasmin Kizilirmak, Chef
+Shownoter: Evita <http://achtungabschrift.de/>, Simon Waldherr <http://simon.waldherr.eu/>, @mrmoe, @bigmcintosh91, @Quimoniz <https://alpha.app.net/Quimoniz>, @Dr4k3 <https://twitter.com/dr4k3_le>
+Chat: <http://webchat.freenode.net/?channels=sondersendung>
+Stream: <http://streams.xenim.de/sendezentrum.mp3>
+Webseite: <http://die-sondersendung.de/live-beschallung>
+Episodepage: <http://die-sondersendung.de/sz005-kinder-ins-wurmloch>
+Episodetitle: 30C3 - Tag 2 - Kinder ins Wurmloch
+/HEADER
+
+1388260936 Intro #c
+1388260966 Begrüßung des Publikums, des Chats, der Hörer
+1388261020 Bühnenstück: "V wie Verfassungsschutz" <http://so36.de/events/no-theater-v-wie-verfassungsschutz/>
+1388261036 Streamgate <http://www.tomshardware.de/mit-highspeed-ins-internet-streamgate-erweitert-angebot-mit-sdsl,news-2773.html>
+1388261055 Nö-Theater in Köln <http://www.noetheater.de>
+1388261109 Artikel auf Spiegel Online über Schlangen vor der Frauentoilette
+1388261141 Claudias Geheimtipp Frauentoilette im -Garderobenfoyer 1
+1388261151 Frauenanteil ist gestiegen dieses Jahr, nur noch nicht im Publikum
+1388261194 Zeitzonen <http://de.wikipedia.org/wiki/Zeitzonen> #g
+1388261210 Statistiken der Besucher (gestern 8.000, heute (Samstag) 10.000)
+1388261234 BCC als Streamingort hinzubuchen
+1388261263 Coffeenerds <https://events.ccc.de/congress/2013/wiki/Assembly:Coffeenerds> #g
+1388261269 Aeropress <http://www.aeropress.com/> #shopping
+- im Wiki <http://de.wikipedia.org/wiki/AeroPress> #g
+1388261310 Siebdruck <http://de.wikipedia.org/wiki/Siebdruck> #g
+1388261327 Food Hacking
+1388261342 Shirt-Verkauf
+- Start tgl. 14 Uhr
+- "Und die Schlange davor" #q
+
+
+1388261413 1. Gast - Evelyn Schubert <https://twitter.com/eyelyn> #c
+- Evelyns Portfolio <http://evelynschubert.com>
+1388261434 Logos <http://de.wikipedia.org/wiki/Logo_(Zeichen)> #g
+1388261454 Evelyn hat das Logo und die T-Shirts vom 30C3 entworfen
+1388261513 Design vom 24C3 "Volldampf voraus"
+1388261516 Design vom 25C3 "Nothing To Hide"
+1388261554 Schwierigkeiten bei der Motto-Wahl
+1388261566 Redesign der ccc Webseite 2009 (ironisch als Beta Version bezeichnet - Ralf) <http://ccc.de/>
+1388261618 Ruby <http://www.ruby-lang.org/de/>
+- auf Wikipedia <http://de.wikipedia.org/wiki/Ruby_(Programmiersprache)> #g
+1388261633 HTML <http://de.wikipedia.org/wiki/Hypertext_Markup_Language> #g
+1388261636 CSS <http://de.wikipedia.org/wiki/Cascading_Style_Sheets> #g
+1388261644 "Der Nerdflüsterer" (Evelyn) #quote
+1388261690 Was hat sich der Künstler eigentlich gedacht?
+1388261709 Das 30C3-Artwork <http://evelynschubert.com/30c3.html>
+- Logo <https://events.ccc.de/congress/2013/wiki/skins/mediawiki-bootstrap/assets/logo.png> #image
+1388261792 Ein Vorschlag war "Memory Of the Future" mit mäßiger Begeisterung
+1388261821 Motto letztes Jahr "Not my Department" und Logo 
+1388261832 Gregor Sedlag <https://twitter.com/gregorsedlag> #twitter
+1388261907 Die Rakete stellt eine Flucht aus dem Wurmloch dar
+1388262031 Die Farbwahl ist schwierig
+1388262062 Das Logo auf dem T-Shirt leuchtet im dunkeln
+1388262139 Logo des 18C3 <http://events.ccc.de/congress/2001/images/logo/18C3-logo-small.gif> #image
+1388262160 Ralf hatte gemischte Gefühle bei diesem Logo
+1388262248 Das CCC-Logo ist ein "Nebenbeiprojekt"
+1388262299 Forschungsgemeinschaft elektronische Medien e.V. (FEM) <http://fem.tu-ilmenau.de> #g
+1388262309 Lounge <https://events.ccc.de/congress/2013/wiki/Room:Lounge>
+1388262348 Aufforderung zur Posterbestellung via Twitter an Publikum
+Milliways <http://www.milliways.info/wiki/Chaos_Communication_Congress_2013> #g
+
+
+1388262527 2. Gast - Sascha Ludwig #c
+1388262554 POC - Phone Operation Center
+1388262570 Event Phone <http://eventphone.de/>
+1388262577 GSM <http://de.wikipedia.org/wiki/Global_System_for_Mobile_Communications> #g
+1388262588 NOC - Network Operation Center <https://events.ccc.de/2013/12/04/noc/>
+1388262643 2724 User im DECT, GSM oder SIP (Stand 28.12.2013 21:31)
+1388262672 SIP <http://de.wikipedia.org/wiki/Session_Initiation_Protocol> #g
+1388262689 DECT Phones <http://de.wikipedia.org/wiki/Digital_Enhanced_Cordless_Telecommunications> #g
+DECT Reichweite bis ins anliegende Hotel, 19. Stock bzw. auf Zimmer
+1388262756 Übersetzungen sind live über die DECT, GSM und SIP-Telefone abrufbar
+1388262789 Die Koordination der Engel läuft ebenfalls über die Eventphones
+1388262803 "Wir loggen nicht." (Sascha, auf die Frage nach Statistiken) #q
+1388262834 Es wird nicht nur "der Nerdigkeit halber", sondern wirklich zur Lösung von Problemen verwendet
+1388262898 Alle sollten und sollen schnell miteinander kommunizieren
+1388262905 Roaming <http://de.wikipedia.org/wiki/Roaming> #g
+1388262916 Chaos Communication Camp 2003 <http://dasalte.ccc.de/camp/2003/index.en.html> #g
+1388262938 Auf 29C3 waren ca 1.600 Nutzer
+1388262985 Seelsorge für alle die Zuhause das DECT Telefon nicht mehr zum Laufen bekommen
+1388262991 Registrierung vor dem Event ist erwünscht (4-stellige Nummern) <http://www.eventphone.de/guru2/index/eventinfo?event=30C3> #g
+1388263073 Technisch gesehen ist eine fünfstellige Benutzeranzahl kein Problem 
+1388263082 40 Basisstationen sind derzeit im Betrieb (mehr Access Points wären trotzdem wünschenswert)
+1388263142 Dank an das CCH <http://www.cch.de/>
+1388263160 In der morgigen Sondersendung wird jemand vom CCH zu Gast sein
+1388263191 Probleme mit inkompatiblen Geräten
+1388263228 Liste empfohlener Geräte <https://www.eventphone.de/wiki/index.php/DECT_Phone_Compatibility_List> #g
+1388263268 1000 SIM-Karten konnten für je 2€ vom eventphone-Team gekauft werden (und waren ruckzuck weg)
+1388263317 Anonymität beim Gebrauch von DECT wird gewährleistet
+1388263361 Auch Gespräche von außen sind möglich
+1388263380 GSM-Bänder benötigen Genehmigung von der Bundesnetzagentur <https://de.wikipedia.org/wiki/GSM#Situation_in_Deutschland> #g
+1388263391 Ralf zitiert Hans-Peter Uhl <http://www.youtube.com/watch?v=WduKj0KXBiA> #v
+1388263465 Für wieviele Events wird gebucht
+1388263488 Wenn man es geschäftlich macht hört es auf Spaß zu machen
+1388263506 Es wurde überlegt, zu anderen Veranstaltungen zu gehen (allerdings nie umgesetzt)
+1388263533 "Wir leben in dem epischen Jahr, in dem WLAN auf der Republica funktionierte, und auf dem Congress nicht immer." (Claudia) #quote
+1388263587 Die Nummernvergabe ist wie früher die Ticketvergabe
+
+
+1388263600 3. Gast - Fightling & Georg #c
+1388263622 Das Kidspace Assembly <https://events.ccc.de/congress/2013/wiki/Assembly:Kidspace> #g
+1388263634 Auch die Kinder der Kinder Assembly haben DECT Telefone
+1388263704 Das Projekt entstand aus Eigeninitive und Eigenbedarf
+1388263711 Family Village auf dem Camp
+1388263716 Das Bällebad <http://www.pipeline.de/pipeline/showpics.php?id=11075926_l&rid=1>
+1388263745 Das Gängeviertel <http://das-gaengeviertel.info/>
+1388263786 Murmelachterbahn <http://www.getdigital.de/Murmelachterbahn.html> #shopping
+1388263801 Little Bits als Elektrik-Lernspielzeug <http://littlebits.cc>
+1388263971 Mailingliste zum Kinder-Assembly des 30c3 <https://lists.gesindel.org/mailman/listinfo/kidspace>
+1388264000 Anmeldung zum Kinder-Assembly des 31C3 ist derzeit leider noch nicht möglich
+- es gibt noch keinen Link und das wird eine Weile dauern - es wird in Zukunft bekannt gegeben
+1388264121 Sein Sohn war von den Retro-Konsolen begeistert
+1388264184 Chaos macht Schule <http://ccc.de/schule>
+1388264195 Lockpicking <http://de.wikipedia.org/wiki/Lockpicking> #g
+1388264310 Self-organized Sessions <https://events.ccc.de/congress/2013/wiki/Static:Self-organized_Sessions> #g
+1388264363 Junghackertag auf dem 30c3 <https://events.ccc.de/congress/2013/wiki/Projects:Junghackertag>
+- Bis 14 Jahre kostenloser Eintritt
+- in Begleitung eines Erwachsenen
+Tagesticket 35 Euro <https://events.ccc.de/congress/2013/wiki/Static:Tickets#Ticket_Prices> #g
+1388264413 "Auch Hacker pflanzen sich fort, das macht mir Mut." (Ralf) #q
+
+
+1388264493 4. und 5. Gast - Jannes und Florian #c
+- vom Video Operation Center (VOC) und zuständig fürs Livestreaming vom 30C3
+1388264495 Forschungsgemeinschaft elektronische Medien e.V. <http://fem.tu-ilmenau.de>
+1388264533 Streaming und Recording auf dem Congress wird seit 2005 vom FEM-Team gemacht
+1388264582 Die 4 Säale die im Fahrplan stehen werden gestreamt und aufgezeichnet
+1388264707 Die Kooperation wie sie auf dem 30C3 ist wird wohl auf künftigen Congressen so weitergeführt
+1388264761 Das FEM hat vier Kameras vom CCC bekommen
+1388264799 6 weitere Kameras und zusätzliche Hardware hat das FEM selbst gestellt
+1388264858 Video- und Audioengel bedienen die Technik <https://events.ccc.de/congress/2013/wiki/Static:Volunteers#Audio.2FVideo> #g
+1388264886 Ca. 20 Personen sind im Kernteam mit den Streams und Aufzeichnungen beschäftigt (exkl. Engel)
+1388264954 Die Engel bekommen vom FEM/VOC Vorgaben was Perspektiven angeht
+1388265027 Bild vom Operationcenter
+1388265068 Food-Team-Engel beliefern das VOC
+1388265103 Grund für Streamabbrüche sind allgemeine Netzwerkprobleme
+1388265153 Alle Streams wurden dennoch aufgezeichnet
+1388265169 20 bis 30 Computer verteilen die Stream nach draußen - komplexes Setup
+1388265188 "Wenn kein Netzwerk da ist, gibt es draußen auch keinen Stream" (Florian) #q
+1388265248 Es wird insgesamt 135 Streams geben.
+- zwei werden nicht veröffentlicht
+1388265303 Ab Tag 2 gibt es die ersten Videoveröffentlichungen
+1388265347 Es gibt auf Grund vieler Mirrors keine Statistiken zu den Abrufzahlen
+1388265377 Multicast <http://de.wikipedia.org/wiki/Multicast> #g
+1388265394 5000 - 6000 Zuschauer im Schnitt
+1388265401 Keynote mit Greenwald <https://events.ccc.de/congress/2013/Fahrplan/events/5622.html> #g
+1388265418 Das Opening Event hatte mehr Zuschauer als die Keynote
+- "Das Urgestein wird sich freuen" (Claudia) #q
+1388265412 Opening Event mit @Timpritlove <http://www.youtube.com/watch?v=td0em-CxTyU> #video
+1388265443 Viele haben zumindest ein kleines Streamingfenster offen - 5% der Streams werden an IPs aus dem CCH geliefert 
+1388265487 Es gab keine Angriffe auf die VOC/FEM Infrastruktur
+1388265508 Die Videos gibt es auf media.ccc.de <http://media.ccc.de/> #link
+- Alternativ auf cdn.media.ccc.de <http://cdn.media.ccc.de> #link
+
+1388265542 6. Gast - Stefan Wehrmeyer <https://twitter.com/stefanwehrmeyer> #c
+1388265577 IFgint Talk <https://events.ccc.de/congress/2013/Fahrplan/events/5509.html> #g
+Youtube <http://www.youtube.com/watch?v=zfVBFpV2x44> #video
+1388265598 Frag den Staat <https://fragdenstaat.de>
+1388265599 Logbuch Netzpolitik <http://logbuch-netzpolitik.de/lnp009> #podcast
+1388265598 28c3 <http://events.ccc.de/category/28c3/>
+1388265622 Snowden <http://de.wikipedia.org/wiki/Edward_Snowden> #g
+1388265625 "In a nutshell" <http://de.wikipedia.org/wiki/In_nuce> #g
+1388265629 Elevator Pitch <http://de.wikipedia.org/wiki/Elevator_Pitch> #g
+1388265668 Grundlage für Frag den Staat ist ein Gesetz (Informationsfreiheitsgesetz) <http://de.wikipedia.org/wiki/Informationsfreiheitsgesetz> #g
+1388265751 Einen Post-Snowden-Peak kann er nicht feststellen
+SigInt <http://de.wikipedia.org/wiki/Signals_Intelligence> #g
+1388265791 "Eigentlich müssen wir den Staat zurücküberwachen" (Stefan) #q
+"Hacker können Dinge sicherer machen aber mit Gesetzen..." #q
+1388265881 Die Informationsfreiheitsgesetze müssen von Pull zu Push gewandelt werden
+- der Staat soll von sich aus Informationen zur Verfügung stellen
+1388265927 DoS-Angriff auf die Parlamente, Staat reagiert teilweise
+- Denial-of-Service-Angriff <http://de.wikipedia.org/wiki/Denial_of_Service> #g
+1388265986 Transparenz in der Politik <http://de.wikipedia.org/wiki/Transparenz_(Politik)> #g
+1388266007 Transparenzgesetze in Hamburg <https://www.hamburg.de/transparenzgesetz/>
+1388266087 ACTA <http://de.wikipedia.org/wiki/Anti-Counterfeiting_Trade_Agreement> #g
+1388266134 Geschäfts- und Betriebsgeheimnisse als Ablehnungsgrund <http://de.wikipedia.org/wiki/Betriebs-_und_Gesch%C3%A4ftsgeheimnis> #g
+- oft unbegründed
+1388266173 Hamburg - Public Interest Tests #t
+1388266221 Letztes Jahr war er auf Bühne 1, dieses Jahr auf Bühne 6
+1388266316 Informationsfreiheit <http://de.wikipedia.org/wiki/Informationsfreiheitsgesetze> #g
+1388266352 Sie haben Informationen veröffentlicht, die nicht veröffentlicht werden durften
+1388266375 Meta-Anfrage (Wie wurden die Informationen innerhalb der Behörde weitergegeben)
+1388266426 Frag-den-Staat ist E-Mail-Anbieter
+
+1388266448 7. Gast - Michael Büker <https://twitter.com/emtiu> #c
+1388266475 Michael ist Physiker
+1388266491 Claudia möchte, dass er Wurm- und Schwarze Löcher erklärt
+1388266517 Breaking Baryons <https://events.ccc.de/congress/2013/F*ahrplan/events/5305.html>
+- Baryon <http://de.wikipedia.org/wiki/Baryon> #g
+1388266536 LHC "Doomsday Machine" <http://de.wikipedia.org/wiki/LHC> #g
+1388266553 Strukturelle Benachteiligung durch das Hacker Jeopardy <https://events.ccc.de/congress/2013/Fahrplan/events/5577.html>
+1388266632 Higgs-Boson wird durch einen bescheuerten Zufall Gottesteilchen ("Goddamn" Particle) genannt
+- Higgs-Boson <http://de.wikipedia.org/wiki/Higgs-Boson> #g
+- Begriff "Goddamn Particle" <http://de.wikipedia.org/wiki/Higgs-Boson#Entwicklung_der_Theorie> #g
+1388266725 Teilchenbeschleuiniger <http://de.wikipedia.org/wiki/Teilchenbeschleuniger> #g
+1388266763 Das CERN <http://www.cern.ch/>
+1388266850 Im LHC fallen einige Terrabyte pro Sekunde an
+1388266902 Er ist auf dem Weg, Wissenschaftskommunikator zu werden
+- Wissenschaftskommunikation in der Wikipedia <http://de.wikipedia.org/wiki/Wissenschaftskommunikation> #g
+1388266948 Science Slam <http://de.wikipedia.org/wiki/Science_Slam> #g
+1388266965 DESY <http://de.wikipedia.org/wiki/Deutsches_Elektronen-Synchrotron> #g
+1388267025 Astroteilchenphysik <http://de.wikipedia.org/wiki/Astroteilchenphysik> #g
+1388267106 Die Angst vom LHC (bzw. dadurch erzeugten Schwarzen Löchern) ist vollkommen unbegründet
+1388267164 Schwarzes Loch <http://de.wikipedia.org/wiki/Schwarzes_Loch> #g
+1388267173 Wurmlöcher sind derzeit nur theoretisch und konnten noch nicht nachgewiesen werden <http://de.wikipedia.org/wiki/Wurmloch> #g
+
+
+1388267242 8. und 9. Gast - Jasmin Kizilirmak und Chef #c
+- Jasmin auf Twitter <https://twitter.com/federtanz>
+1388267289 Jasmin und Chef kommen vom Himmel
+1388267281 Das Engelsystem auf dem 30c3
+1388267300 Herolde im Engelsystem - verantwortlich für den "Raum" (Saal) - Anwesenheit Speaker, Technik etc.
+1388267356 Hacker Jeopardy <http://events.ccc.de/congress/2013/Fahrplan/events/5577.html> #g
+1388267361 Glenn Greenwald Talk <http://www.youtube.com/watch?v=xEJIR0-KJu0> #video
+1388267377 Crowd Control <http://en.wikipedia.org/wiki/Crowd_control> #g
+1388267494 Lindworm <https://twitter.com/lindworm> #twitter
+1388267560 Arbeitenden Leuten wird Essen vom CCC zur Verfügung gestellt, Kapazitäten reichen eigentlich nicht aus 
+1388267660 Ersterfahrungen der Gäste mit dem Kongress und den Engeln, Empfehlung für Erstbesucher Engel zu werden
+1388267787 "Zeh rein halten oder Kopfsprung machen" / Congress besuchen oder gleich Engel werden (Chef) #q
+1388267841 Der Bedarf an Engeln ist für dieses Jahr gedeckt
+1388267995 "...vor allem wenn man in den Gängen rumläuft um zu gucken ob nicht wieder Leute auf den Gängen gespawnt sind." (Jasmin) #q
+- "Spawnen" <http://de.wikipedia.org/wiki/Spawnen> #g
+1388268063 Wann/Wo kann man sich zum 31c3 als Engel melden?
+1388268076 "Nach dem Kongress ist vor dem Kongress." (Ralf) #quote
+1388268095 ICC Berlin <http://www.icc-berlin.de/>
+- im Wiki <http://de.wikipedia.org/wiki/Internationales_Congress_Centrum_Berlin> #g
+1388268153 Übernachten beim CCC (Turnhallen, Hotel, Ferienwohnungen)<https://events.ccc.de/congress/2013/wiki/Static:Accommodation> #g
+- Nehmt Badeschlappen mit #spoiler
+1388268269 "Viel hilft viel." (Chef) #quote
+1388268339 IT-Crowd Notrufnummer <http://www.youtube.com/watch?v=HWc3WY3fuZU> #video
+- Die Nummer ist auf dem Kongress geschaltet - 0118 999 881 999 119 725 … 3
+
+
+1388268378 Verabschiedung #c
+1388268393 Morgen ist um 21 Uhr wieder eine Sondersendung (mit Tim und Ralf)
+- Hintergründe und Überblick über die Talks
+1388268425 "Schrimpe war der Wendepunkt" (Claudia) #q
+- Clemens Schrimpe <https://twitter.com/csch42>
+
+
+1388268440 Outro Ende #c
