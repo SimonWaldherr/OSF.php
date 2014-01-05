@@ -285,15 +285,7 @@ function osf_parser($shownotes, $data) {
       "$1&#8209;$2",
       '&#39;'
     );
-    $newarray['text'] = trim(preg_replace($regex['search'], $regex['replace'], ' ' . htmlentities(preg_replace(array(
-      $pattern['tags'],
-      $pattern['urls'],
-      $pattern['urls2']
-    ), array(
-      '',
-      '',
-      ''
-    ), trim($zeile[5], '/\s\-<>/')), ENT_QUOTES, 'UTF-8') . ' '));
+
     $newarray['orig'] = trim(preg_replace(array(
       $pattern['tags'],
       $pattern['urls'],
@@ -303,6 +295,9 @@ function osf_parser($shownotes, $data) {
       '',
       ''
     ), $zeile[5]));
+
+    $newarray['text'] = trim(htmlentities($newarray['orig'], ENT_QUOTES, 'UTF-8'));
+
     $newarray['rank'] = $kaskade;
 
     // Wenn Tags vorhanden sind, diese ebenfalls im Array speichern
