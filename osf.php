@@ -983,8 +983,8 @@ function osf_export_psc($array) {
     if ($item['chapter']) {
       $filterpattern = array(
         '((#)(\S*))',
-        '(\<((http(|s)://[\S#?-]{0,128})>))',
-        '(\s+((http(|s)://[\S#?-]{0,128})\s))'
+        '(\<((http(|s)://[\S#?-]{0,1024})>))',
+        '(\s+((http(|s)://[\S#?-]{0,1024})\s))'
       );
       $text          = trim(preg_replace($filterpattern, '', $item['text']));
       if (strpos($item['time'], '.')) {
