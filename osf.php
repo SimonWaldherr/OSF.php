@@ -28,7 +28,7 @@ function osf_affiliate_generator($url, $data) {
       $pid = '';
     }
     $aid  = '?ie=UTF8&amp;linkCode=as2&amp;tag=' . $amazon;
-    $purl = 'http://www.amazon.de/gp/product/' . $pid . '/' . $aid;
+    $purl = 'https://www.amazon.de/gp/product/' . $pid . '/' . $aid;
   } elseif ((strstr($url, 'www.amazon.com/') && strstr($url, 'p/')) && ($amazon != '')) {
     if (strstr($url, "dp/")) {
       $pid = substr(strstr($url, "dp/"), 3, 10);
@@ -38,10 +38,10 @@ function osf_affiliate_generator($url, $data) {
       $pid = '';
     }
     $aid  = '?ie=UTF8&linkCode=as2&amp;tag=' . $amazon;
-    $purl = 'http://www.amazon.com/gp/product/' . $pid . '/' . $aid;
+    $purl = 'https://www.amazon.com/gp/product/' . $pid . '/' . $aid;
   } elseif ((strstr($url, 'thomann.de/de/')) && ($thomann != '')) {
     $thomannurl = explode('.de/', $url);
-    $purl     = 'http://www.thomann.de/index.html?partner_id=' . $thomann . '&amp;page=/' . $thomannurl[1];
+    $purl     = 'https://www.thomann.de/index.html?partner_id=' . $thomann . '&amp;page=/' . $thomannurl[1];
   } elseif ((strstr($url, 'itunes.apple.com/de')) && ($tradedoubler != '')) {
     if (strstr($url, '?')) {
       $purl = 'http://clkde.Tradedoubler.com/click?p=23761&amp;a=' . $tradedoubler . '&amp;url=' . urlencode($url . '&amp;partnerId=2003');
@@ -51,6 +51,7 @@ function osf_affiliate_generator($url, $data) {
   } else {
     $purl = $url;
   }
+  $purl = str_ireplace(array('http://de.wikipedia.org/', 'http://en.wikipedia.org/', 'http://github.com', 'http://www.torproject.org/', 'http://www.eff.org/', 'http://thepiratebay.se/', 'http://blog.fefe.de/', 'http://netzpolitik.org/', 'http://www.piratenpartei.de/', 'http://twitter.com/', 'http://www.facebook.com/', 'http://alpha.app.net/'), array('https://de.wikipedia.org/', 'https://en.wikipedia.org/', 'https://github.com', 'https://www.torproject.org/', 'https://www.eff.org/', 'https://thepiratebay.se/', 'https://blog.fefe.de/', 'https://netzpolitik.org/', 'https://www.piratenpartei.de/', 'https://twitter.com/', 'https://www.facebook.com/', 'https://alpha.app.net/'), $purl);
   return $purl;
 }
 
