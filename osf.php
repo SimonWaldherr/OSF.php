@@ -234,7 +234,7 @@ function osf_parser($shownotes, $data) {
   $pattern['tags']    = '((\s#)(\S*))';
   $pattern['urls']    = '(\s+((http(|s)://\S{0,256})\s))';
   $pattern['urls2']   = '(\<((http(|s)://\S{0,256})>))';
-  $pattern['kaskade'] = '/\n((((\d+:)?\d+:\d+)(\\.\d+)?)*[\t ]* *[\-\–\—]+ )/';
+  $pattern['kaskade'] = '/(((((\d+:)?\d+:\d+)(\\.\d+)?)|(\d{9,}))*[\t ]* *[\-\–\—]+ )/';
 
   // danach werden mittels des zeilen-Patterns die Shownotes in Zeilen/items geteilt
   preg_match_all($pattern['zeilen'], $shownotes, $zeilen, PREG_SET_ORDER);
