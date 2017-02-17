@@ -29,12 +29,12 @@ function parserWrapper($pad) {
 
   $shownotesArray = osf_parser($shownotesString, $data);
 
-  $return['podcast'] = osf_get_podcastname($shownotesArray['header']);
-  $return['episode'] = str_replace($return['podcast'], '', osf_get_episodenumber($shownotesArray['header']));
-  $return['shownoter'] = osf_get_persons('shownoter', $shownotesArray['header']);
-  $return['podcaster'] = osf_get_persons('podcaster', $shownotesArray['header']);
-  $return['episodetime'] = osf_get_episodetime($shownotesArray['header']);
-  $return['subject'] = osf_get_episodename($shownotesArray['header']);
+  $return['podcast'] = osf_get_podcastname(@$shownotesArray['header']);
+  $return['episode'] = str_replace($return['podcast'], '', osf_get_episodenumber(@$shownotesArray['header']));
+  $return['shownoter'] = osf_get_persons('shownoter', @$shownotesArray['header']);
+  $return['podcaster'] = osf_get_persons('podcaster', @$shownotesArray['header']);
+  $return['episodetime'] = osf_get_episodetime(@$shownotesArray['header']);
+  $return['subject'] = osf_get_episodename(@$shownotesArray['header']);
 
   $return['json'] = json_encode($shownotesArray['export']);
   $return['chapter'] = osf_export_chapterlist($shownotesArray['export']);

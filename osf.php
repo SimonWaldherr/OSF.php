@@ -97,10 +97,12 @@ function osf_replace_timestamps($shownotes) {
       if (isset($unixtimestamps[0][0])) {
         $osf_starttime = $unixtimestamps[0][0];
         $regexTS = array(
-          '/\n[0-9:]{9,23}/e',
+          '/\n[0-9:]{9,23}/',
           'osf_time_from_timestamp(\'\\0\')'
         );
-        return preg_replace($regexTS[0], $regexTS[1], $shownotes);
+        return preg_replace_callback($regexTS[0], function ($matches) {
+          return osf_time_from_timestamp($matches[0]);
+        }, $shownotes);
       }
     }
   }
@@ -152,7 +154,7 @@ function osf_get_persons($persons, $header) {
   $regex['shownoter'] = '/(Shownoter|Zusammengetragen)[^:]*:([ \S]*)/';
   $regex['podcaster'] = '/(Podcaster|Zusammengetragen)[^:]*:([ \S]*)/';
   preg_match_all($regex[$persons], $header, $persons);
-  $persons    = preg_split('/(,|;| und | and )/', $persons[2][0]);
+  $persons    = preg_split('/(,|;| und | and )/', @$persons[2][0]);
   $personsArray = array();
   $personsArrayHTML = array();
   $i = 0;
@@ -175,7 +177,7 @@ function osf_get_episodetime($header) {
   $regex = '/(Starttime|Startime|Startzeit|Episodenbeginn|Episodetime|Episodestart)[^:]*:([ \S]*)/';
   preg_match_all($regex, $header, $date);
   date_default_timezone_set('Europe/Berlin');
-  $date = strtotime($date[2][0]);
+  $date = strtotime(@$date[2][0]);
   if($date != false) {
     return $date;
   }
@@ -185,24 +187,24 @@ function osf_get_episodetime($header) {
 function osf_get_podcastname($header) {
   $regex = '/(Podcast|Podcastname|Sendung)[^:]*:([ \S]*)/';
   preg_match_all($regex, $header, $title);
-  return $title[2][0];
+  return @$title[2][0];
 }
 
 function osf_get_episodenumber($header) {
   $regex = '/(Episode|Folge)[^:]*:([ \S]*)/';
   preg_match_all($regex, $header, $number);
-  return $number[2][0];
+  return @$number[2][0];
 }
 
 function osf_get_episodename($header) {
   $regex = '/(Title|Episodetitle|Thema|Subject)[^:]*:([ \S]*)/i';
   preg_match_all($regex, $header, $title);
-  return $title[2][0];
+  return @$title[2][0];
 }
 
 function osf_parser($shownotes, $data) {
   // Diese Funktion ist das Herzstück des OSF-Parsers
-  $tagsmode  = $data['tagsmode'];
+  $tagsmode  = @$data['tagsmode'];
   $specialtags = $data['tags'];
   $exportall   = $data['fullmode'];
 
